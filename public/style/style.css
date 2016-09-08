@@ -1,0 +1,22 @@
+body {
+    padding: 50px;
+    font-family: 14px "Lucida Grande", Helvetica;
+}
+
+#room {
+    background: #ddd;
+    margin-bottom: 1em;
+}
+
+#content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#messages {
+    width: 690px;
+    height: 300px;
+    overflow: auto;
+    background: #eee;
+    margin: 0 10px 1em 0;
+}
