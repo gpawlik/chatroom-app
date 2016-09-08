@@ -4,6 +4,8 @@ var path  = require('path');
 var mime  = require('mime');
 var cache = {};
 
+var chatServer = require('./lib/chat_server');
+
 // Creating HTTP server
 var server = http.createServer(function (request, response) {
     var filePath = false;
@@ -22,6 +24,9 @@ var server = http.createServer(function (request, response) {
 server.listen(3000, function () {
     console.log('Server listening on port 3000...');
 });
+
+// Listen to chat module
+chatServer.listen(server);
 
 // Handle sending 404 errors
 function send404(response) {
